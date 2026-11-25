@@ -3,3 +3,32 @@ __pycache__/
 *.pyc
 .env
 .DS_Store
+
+# Private conversation data
+software/ai/memory.json
+data/
+logs/
+
+# Audio recordings
+*.wav
+
+# Backup files
+*.bak
+*.backup
+*.tar.gz
+
+# Local settings and credentials
+.env.*
+*.pem
+*.key
+
+# Local AI models
+*.onnx
+*.onnx.json
+software/audio/models/
+
+# Editor saves and old code
+*.save
+*.p
+*_backup*.py
+*_before_refactor.py
