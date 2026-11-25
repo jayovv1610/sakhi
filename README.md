@@ -1,18 +1,16 @@
+# SAKHI
 
-# Sakhi
+SAKHI is a Raspberry Pi 5-powered AI desktop companion designed to help with everyday tasks.
 
-Sakhi is a Raspberry Pi 5-powered AI desktop companion.
-
-## Planned Features
+## Features
 - Animated eyes and expressions
-- Voice activation
 - Speech recognition
-- AI-powered conversations
+- Local AI-powered conversations
 - Text-to-speech
-- RGB lighting
+- Basic commands and daily assistance
 
 ## Hardware
 - Raspberry Pi 5 (8GB)
 
 ## Development Status
-Initial software setup.
+Active development. Voice interaction and animated eyes have been implemented. Additional features and hardware integration are in progress.
