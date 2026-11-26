@@ -1,4 +1,4 @@
-
+from pathlib import Path
 import math
 import random
 import pygame
@@ -209,6 +209,7 @@ def main():
 
     current_state = state
     current_emotion = emotion
+    state_file = Path(__file__).resolve().parents[2] / "data" / "eye_state.txt"
 
     blink_at = pygame.time.get_ticks() + 2000
     blink_started = -1000
@@ -222,6 +223,18 @@ def main():
     next_look = 0
 
     while running:
+        # Keep the eyes in sync with Sakhi
+        try:
+           new_state = state_file.read_text().strip()
+
+           if new_state in ("IDLE", "LISTENING", "THINKING", "SPEAKING", "ERROR"):
+               if new_state != current_state:
+                   current_state = new_state
+                   current_emotion = "NORMAL"
+
+        except OSError:
+            pass
+
         now = pygame.time.get_ticks()
         timer = now / 1000
 
